@@ -1,0 +1,71 @@
+<div id=D__ID class="bg">
+    <div class="container mt-95 body_color">
+        <div class="formbox">
+            <form id=F__ID>
+                <div class="formgroup zoom">
+                    <div class="questiongroup">
+                        <fieldset class="">
+                            <span class="question">
+                                <p>Thank you for completing these questions. Your responses indicate that you are
+                                    eligible to participate in the study.</p>
+                            </span>
+                        </fieldset>
+                    </div>
+                </div>
+                <div id="S0_17__ID">
+                    <div class="formgroup zoom">
+                        <fieldset class="">
+                            <span class="question">Name</span>
+                            <div class="grid-container-1">
+                                <div>
+                                    <label>
+                                        <span class="question"></span>
+                                        <input id="abcd" type=text name="name" class="formcontrol" placeholder=""
+                                            required />
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="formgroup zoom">
+                        <fieldset class="">
+                            <span class="question">Email address</span>
+                            <div class="grid-container-1">
+                                <div>
+                                    <label>
+                                        <span class="question"></span>
+                                        <input id="abcd" type=email name="email" class="formcontrol" placeholder=""
+                                            required />
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <input type="text" name="part_id" id="part_id__ID" style="display:none" />
+                    <div class="formgroup right">
+                        <button id="submit__ID" type="submit" class="submit_btn">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function F__ID() {
+            VmInclude: '__HOST__/assets/js/form.01.js'
+            //---------------------------------------
+            $('#D__ID').on('load', function () {
+                if(m.input!=undefined){
+                    $('#part_id__ID').val(m.input.part_id)
+                }
+
+            });
+            //---------------------------------------
+            m.after_insert = function (data, res) {
+                if (m.prefix == undefined) { $vm.load_module('thank-you', '', {}); }
+                else $vm.load_module(m.prefix + 'thank-you', '', {});
+            }
+        }
+    </script>
+    <style>
+        /*VmInclude:__HOST__/assets/css/wapp-form.css*/
+    </style>

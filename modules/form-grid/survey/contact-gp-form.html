@@ -1,0 +1,162 @@
+<div id=D__ID class="bg">
+    <div class="container mt-95 body_color">
+        <div class="formbox">
+            <form id=F__ID>
+                <div class="textcenter">
+                    <h3>
+                        Thank you for your interest in this important new research study.
+                    </h3>
+                  <p class="textleft">
+                    You may be able to refer a patient into the trial if you:
+                  </p>
+                </div>    
+                <div class="text-left">
+                    <ul>
+                        <li>
+                            You live in NSW
+                        </li>
+                        <li>
+                            You currently have a young person with anorexia nervosa under your care about to initiate Maudsley Family Based Treatment
+                        </li>
+                        <li>
+                            You are willing to continue to medically monitor them for the duration of the trial (3 months)
+                        </li>
+                    </ul>
+                </div>
+                <div class="textleft">
+                    <p class="">
+                        You can find out more information below:
+                    </p>
+                  </div>
+                  <div class="textleft">
+                    <a href="assets/pdf/General Practitioner Clearance Form_V5_clean.pdf" class="rd_btn width_btn_250">Information sheet</a>
+                  </div>
+                    <div class="formgroup" id="register_for_info__ID">
+                        <div class="questiongroup ">
+                            <span class=""><i>If you would like to be contacted for further information please register your details below</i></span>
+                            <fieldset class="">
+                                <span class="question">Name</span>
+                                <input class="formcontrol" type="text"  name="name" placeholder="" required />
+                            </fieldset>
+                            <fieldset class="">
+                                <span class="question">Contact details (email)</span>
+                                <input class="formcontrol" type="email" name="email" placeholder="" required />
+                                <input class="formcontrol" type="text" name="group" placeholder="" style="display:none"/>
+                            </fieldset>
+                        </div>
+                    
+                        <div class="formgroup right">
+                            <button id="submit__ID" type="submit" class="submit_btn">Submit</button>
+                        </div>
+                    </div>
+                    <div class="textleft" id="registered__ID" style="display:none">
+                        <p class=""> <b>Your contact information has been registered</b></p>
+                      </div> 
+                      <div class="textcenter">
+                        <h3>
+                            FAQ Questions and Answers
+                        </h3>
+                      <!-- <p class="textleft question">
+                            General Questions
+                          </p>
+                          <p class="textleft question">
+                            1) What is this study about?
+                          </p>
+                          <p class="textleft">
+                            The ‘CAFTAN’ study will investigate the effects of cannabidiol (CBD) on anxiety in young
+                            persons with anorexia nervosa who are about to commence Maudsley Family-Based
+                            Treatment (MFBT) in the community and are in the care of a medical practitioner (GP or
+                            paediatrician).
+                          </p>
+                          <p class="textleft">
+                            The study aims to determine the safety and effectiveness of cannabidiol – the non-
+                            intoxicating component of the cannabis plant – on anxiety during MFBT.
+                          </p>
+                          <p class="textleft">
+                            CBD has demonstrated promising reductions in treatment-resistant anxiety in young
+                            persons. We believe CBD may reduce the anxiety-provoking refeeding phase of MFBT
+                            thereby improving the young person’s response to therapy.
+                          </p>
+                          <p class="textleft question">
+                            2) What is an “open-label” study?
+                          </p>
+                          <p class="textleft">
+                            In an open-label trial, everyone knows which participant is receiving which treatment.
+                          </p>
+                          <p class="textleft">
+                            There is no placebo group, which means all participants receive the CBD medication.
+                          </p>
+                          <p class="textleft question">
+                            3) What is cannabidiol (CBD)?
+                          </p>
+                          <p class="textleft">
+                            Cannabidiol, commonly known as CBD, is one of more than 100 cannabinoids (chemical
+                            substances) found in the cannabis plant. CBD is thought to possess anti-anxiety, anti-seizure,
+                            and anti-psychotic properties, and is being widely studied across a range of indications.
+                          </p>
+                          <p class="textleft question">
+                            4) Does the study drug make you “high” or intoxicated? How will it be administered?
+                          </p>
+                          <p class="textleft">
+                            No, the study drug contains &gt;99% pure plant-derived CBD administered as a soft-gel
+                            capsule.
+                          </p>
+                          <p class="textleft">
+                            Unlike tetrahydrocannabinol (THC), the psychoactive component of cannabis, CBD is not
+                            intoxicating meaning it does not cause a characteristic “high” that people often associate
+                            with cannabis.
+                          </p>
+                          <p class="textleft question">
+                            5) Is it possible to become addicted to CBD?
+                          </p>
+                          <p class="textleft">
+                            No, it is not possible to become addicted to CBD.
+                          </p>
+                          <p class="textleft">
+                            CBD is not intoxicating, and studies do not show evidence of abuse potential or tolerance
+                            and dependence with CBD.
+                          </p>
+                          <p class="textleft question">
+                            6) Is CBD illegal?
+                          </p>
+                          <p class="textleft">
+                            CBD is a controlled medicine in Australia. This means that CBD-containing products can only
+                            be legally accessed on prescription by a doctor via the Therapeutic Goods Administration
+                            (TGA) Special Access Scheme (SAS) and Authorised Prescriber (AP) pathway or in the context
+                            of a clinical trial.
+                          </p>
+                            </div>-->    
+                          
+                      
+                  </form>
+        </div>
+    </div>
+    <script>
+        function F__ID() {
+            VmInclude: '__HOST__/assets/js/form.01.js'
+            //---------------------------------------
+            $('#D__ID').on('load', function () {
+                var m=$vm.module_list['__MODULE__'];
+                if(m.prefix==undefined) m.prefix="";
+                $('#F__ID input[name=group').val('Medical Practitioner');
+            });
+            $vm.home_ready=1;
+
+            var old_submit = m.submit;
+            m.submit = function (event) {
+                old_submit(event);
+                $('#register_for_info__ID').hide();
+                $('#registered__ID').show();
+                if (m.prefix == undefined) {
+                    //$vm.load_module('thank-you', '', {});
+                }
+                else {
+                    //$vm.load_module(m.prefix + 'thank-you', '', {})
+                }
+            }
+        }
+    </script>
+    <style>
+
+        /*VmInclude:__HOST__/assets/css/wapp-form.css*/
+    </style>
