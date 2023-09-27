@@ -32,7 +32,7 @@
         <!----------------------------------------------->
         <script app code>
             //---------------------------------------------
-            $VmAPI={};$vm.ver=[0.24,0.05]; $vm['jquery-ui-min-js']=1;
+            $VmAPI={};$vm.ver=[0.1,0.01]; $vm['jquery-ui-min-js']=1;
             $vm.flexindex=new FlexSearch({  doc: {id: "id",field: ["title","contents"]}    });
             $vm.hosting_path=window.location.href.substring(0, window.location.href.split('?')[0].lastIndexOf('/'));
             //---------------------------------------------
@@ -44,7 +44,7 @@
                 vmext:          {url:$vm.hosting_path+"/modules/system/vm-extension.html"},
             }
             //---------------------------------------------
-            $vm.first_module='home';
+            $vm.first_module='contact-data';
             (function(){ var a=window.location.href.split('?/'); if(a.length==2) $vm.first_module=a[1].split('&')[0].replace(/\//g,'_'); }());
             $vm.ready=function(){
             }
@@ -263,7 +263,6 @@
                 }
             }
             body{background-size: cover; background-repeat: repeat-x; background-position: center top; background-attachment: fixed;}
-            .body_background_default{ background-image: url(assets/images/bg-02.png);}
         </style>
         <!----------------------------------------------->
     </body>

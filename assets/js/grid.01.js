@@ -115,7 +115,7 @@ m.render=function(){
             if(m.records[i][b]!==undefined){
                 value=m.records[i][b];
                 //if(b=="Submit_date") value=$vm.date_to_ddmmyyyy(value.substring(0,10));
-                if(b=="Submit_date") value=(new Date(value).toLocaleDateString(window.navigator.userLanguage || window.navigator.language)+" "+new Date(value).toLocaleTimeString(window.navigator.userLanguage || window.navigator.language));
+                if(b=="Submit_date") value=new Date(value).toLocaleDateString(window.navigator.userLanguage || window.navigator.language);
             }
             else{
                 if(m.records[i]['Data']!=undefined && m.records[i]['Data'][b]!==undefined){
@@ -248,7 +248,7 @@ m.export_records=function(){
     open_model__ID();
     $vm.request(req,function(N,i,txt){
         console.log(i+"/"+N);
-        $('#msg__ID').text((100*i/(2*N)).toFixed(0)+"%");
+        $('#msg__ID').text((100*i/N).toFixed(0)+"%");
         if(i==-1){
             var len=txt.length;
             var n_txt="["+txt.substring(5,len-9)+"]";

@@ -244,7 +244,7 @@ m.submit=function(event){
                 //if(m.change_status==undefined) m.change_status=0;
                 m.change_status++;
                 if(m.input.goback!=undefined) window.history.go(-1);            //from grid
-                else console.log('Your data has been successfully submitted');  //$vm.alert('Your data has been successfully submitted');    //standalone
+                else $('#contact_details_sent__ID').show();    //standalone
             }
             if(FN==0) after_submit();
             else{

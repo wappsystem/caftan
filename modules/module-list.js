@@ -6,15 +6,8 @@
     var m=$vm.module_list;
     var api="wapp";
     //-------------------------------------------------------------------------------------
-    m[p+"not_elig1"]         ={url:H+"/form-grid/survey/not_elig1.html"},
-    m[p+"thank-you"]         ={url:H+"/form-grid/survey/thank-you.html"},
-    m[p+"survey-data"]       ={url:H+"/form-grid/survey/eligibility-data.html",Table:"caftan-survey",router:1 };
-    m[p+"survey-all-data"]   ={url:H+"/form-grid/survey/eligibility-data.html",Table:"caftan-survey",router:1 };
-    m[p+"contact-data"]      ={url:H+"/form-grid/survey/contact-data.html",Table:"caftan-contact-survey",form_module:"contact-form",router:1,taskname:"Contact details" };
-    m[p+"contact-form"]      ={url:H+"/form-grid/survey/contact-form.html",Table:"caftan-contact-survey"};
-    m[p+"screening-data"]      ={url:H+"/form-grid/survey/screening-data.html",Table:"caftan-screening",form_module:"screening-form",router:1,taskname:"screening details" };
-    m[p+"screening-form"]      ={url:H+"/form-grid/survey/screening-form.html",Table:"caftan-screening"};
-    
+
+    m[p+"contact-data"]      ={url:H+"/form-grid/survey/contact-data.html",Table:"caftan-contact",router:1,taskname:"Contact details" };
 
     //if(window.location.toString().indexOf('tb=demo')!=-1){
         for(p in $vm.module_list){
