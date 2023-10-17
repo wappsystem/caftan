@@ -7,12 +7,12 @@
     var api="wapp";
     //-------------------------------------------------------------------------------------
 
-    m[p+"contact-data"]      ={url:H+"/form-grid/survey/contact-data.html",Table:"caftan-contact",router:1,taskname:"Contact details" };
-
-    //if(window.location.toString().indexOf('tb=demo')!=-1){
+    m[p+"contact-data"]      ={url:H+"/form-grid/survey/contact-data.html",Table:"caftan-contact",form_module:"contact-form",router:1,taskname:"Contact details" };
+    m[p+"contact-form"]      ={url:H+"/form-grid/survey/contact-form.html",Table:"caftan-contact",taskname:"Contact details"};
+    if(window.location.toString().indexOf('tb=demo')!=-1){
         for(p in $vm.module_list){
             $vm.module_list[p].Table="demo-"+$vm.module_list[p].Table;
         }
-    //}
+    }
 
 })();
